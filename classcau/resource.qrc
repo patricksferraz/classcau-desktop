@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>img/icon/logoAutonomo.svg</file>
+        <file>img/icon/logoBuscar.svg</file>
+        <file>img/icon/logoClassificador.svg</file>
+        <file>img/icon/logoConfiguracoes.svg</file>
+        <file>img/icon/logoSair.svg</file>
+        <file>img/icon/pLogoClasscau.svg</file>
+        <file>img/icon/tLogoClasscau.svg</file>
+        <file>img/icon/tcLogoClasscau.svg</file>
+    </qresource>
+</RCC>
