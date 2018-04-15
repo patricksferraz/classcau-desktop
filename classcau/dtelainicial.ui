@@ -17,7 +17,7 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Classcau - Início</string>
   </property>
   <property name="toolTip">
    <string/>
@@ -69,40 +69,68 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <layout class="QVBoxLayout" name="verticalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout">
               <property name="spacing">
-               <number>6</number>
+               <number>0</number>
               </property>
               <property name="leftMargin">
-               <number>6</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
-               <number>6</number>
+               <number>0</number>
               </property>
               <item>
-               <widget class="QLabel" name="lModoAvancado">
-                <property name="maximumSize">
-                 <size>
-                  <width>277</width>
-                  <height>16777215</height>
-                 </size>
+               <widget class="QPushButton" name="pbAdvanced">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="contextMenuPolicy">
+                 <enum>Qt::DefaultContextMenu</enum>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
-                <property name="pixmap">
-                 <pixmap resource="resource.qrc">:/icon/img/icon/tLogoClasscau.svg</pixmap>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/pLogoClasscau.svg</normaloff>:/icon/img/icon/pLogoClasscau.svg</iconset>
                 </property>
-                <property name="alignment">
-                 <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+                <property name="iconSize">
+                 <size>
+                  <width>40</width>
+                  <height>40</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QLabel" name="lTextLogo">
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">font: 22pt &quot;Roboto Bk&quot;;</string>
                 </property>
@@ -110,7 +138,7 @@
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#f6f4f4;&quot;&gt;Class&lt;/span&gt;&lt;span style=&quot; color:#faad19;&quot;&gt;cau&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="alignment">
-                 <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                 </property>
                </widget>
               </item>
@@ -130,14 +158,37 @@
              </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="pushButton">
+             <widget class="QPushButton" name="pbMenu">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
               <property name="styleSheet">
-               <string notr="true">font: 10pt &quot;Roboto Bk&quot;;
-background-color: rgb(246, 244, 244);
-color: rgb(51, 23, 9);</string>
+               <string notr="true"/>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/icon/img/icon/logoMenu.svg</normaloff>:/icon/img/icon/logoMenu.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>25</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>false</bool>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -169,6 +220,18 @@ color: rgb(51, 23, 9);</string>
             </property>
             <item row="1" column="2">
              <widget class="QPushButton" name="pbNone">
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
               <property name="styleSheet">
                <string notr="true">font: 10pt &quot;Roboto Bk&quot;;
 background-color: rgb(246, 244, 244);
@@ -186,6 +249,18 @@ color: rgb(51, 23, 9);</string>
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
               </property>
               <property name="styleSheet">
                <string notr="true">font: 15pt &quot;Roboto Bk&quot;;
@@ -215,6 +290,18 @@ color: rgb(51, 23, 9);</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
               <property name="styleSheet">
                <string notr="true">font: 15pt &quot;Roboto Bk&quot;;
 background-color: rgb(246, 244, 244);
@@ -225,8 +312,7 @@ color: rgb(51, 23, 9);</string>
               </property>
               <property name="icon">
                <iconset resource="resource.qrc">
-                <normaloff>:/icon/img/icon/logoAutonomo.svg</normaloff>
-                <activeoff>:/icon/img/icon/tcLogoClasscau.svg</activeoff>:/icon/img/icon/logoAutonomo.svg</iconset>
+                <normaloff>:/icon/img/icon/logoAutonomo.svg</normaloff>:/icon/img/icon/logoAutonomo.svg</iconset>
               </property>
               <property name="iconSize">
                <size>
@@ -244,6 +330,18 @@ color: rgb(51, 23, 9);</string>
                 <verstretch>80</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
               <property name="styleSheet">
                <string notr="true">font: 15pt &quot;Roboto Bk&quot;;
 background-color: rgb(246, 244, 244);
@@ -254,13 +352,16 @@ color: rgb(51, 23, 9);</string>
               </property>
               <property name="icon">
                <iconset resource="resource.qrc">
-                <normaloff>:/icon/img/icon/logoBuscar.svg</normaloff>:/icon/img/icon/logoBuscar.svg</iconset>
+                <normaloff>:/icon/img/icon/logoBuscarc.svg</normaloff>:/icon/img/icon/logoBuscarc.svg</iconset>
               </property>
               <property name="iconSize">
                <size>
                 <width>100</width>
                 <height>80</height>
                </size>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
               </property>
              </widget>
             </item>
@@ -300,14 +401,14 @@ color: rgb(51, 23, 9);</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>249</width>
-                <height>96</height>
+                <width>250</width>
+                <height>150</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>96</height>
+                <width>250</width>
+                <height>150</height>
                </size>
               </property>
               <property name="styleSheet">
@@ -353,6 +454,18 @@ color: rgb(51, 23, 9);</string>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>150</height>
+               </size>
+              </property>
               <property name="focusPolicy">
                <enum>Qt::StrongFocus</enum>
               </property>
@@ -391,6 +504,9 @@ color: rgb(51, 23, 9);</string>
               </property>
               <property name="autoExclusive">
                <bool>false</bool>
+              </property>
+              <property name="autoRepeatInterval">
+               <number>100</number>
               </property>
               <property name="autoDefault">
                <bool>true</bool>

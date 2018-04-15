@@ -36,26 +36,26 @@ public:
     QVBoxLayout *verticalLayout_3;
     QHBoxLayout *horizontalLayout_3;
     QHBoxLayout *horizontalLayout_2;
-    QLabel *lModoAvancado;
+    QPushButton *pbAdvanced;
     QLabel *lTextLogo;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *pushButton;
+    QPushButton *pbMenu;
     QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout_6;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_4;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QPushButton *pbInput;
+    QPushButton *pbOutput;
     QSpacerItem *horizontalSpacer_3;
-    QPushButton *pushButton_4;
+    QPushButton *pbLixeira;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QHBoxLayout *horizontalLayout_5;
-    QPushButton *pushButton_5;
+    QPushButton *pbExtrair;
     QSpacerItem *horizontalSpacer_4;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_8;
+    QPushButton *pbSalvar;
+    QPushButton *pbImprimir;
+    QPushButton *pbEncaminhar;
     QVBoxLayout *verticalLayout_2;
     QScrollArea *scrollArea_2;
     QWidget *scrollAreaWidgetContents_2;
@@ -87,21 +87,25 @@ public:
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setSpacing(0);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(6, 6, -1, -1);
-        lModoAvancado = new QLabel(fClassificador);
-        lModoAvancado->setObjectName(QStringLiteral("lModoAvancado"));
-        lModoAvancado->setMaximumSize(QSize(277, 16777215));
-        lModoAvancado->setPixmap(QPixmap(QString::fromUtf8(":/icon/img/icon/tLogoClasscau.svg")));
-        lModoAvancado->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        horizontalLayout_2->setContentsMargins(0, 0, -1, -1);
+        pbAdvanced = new QPushButton(fClassificador);
+        pbAdvanced->setObjectName(QStringLiteral("pbAdvanced"));
+        pbAdvanced->setFocusPolicy(Qt::NoFocus);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/icon/img/icon/pLogoClasscau.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbAdvanced->setIcon(icon);
+        pbAdvanced->setIconSize(QSize(40, 40));
+        pbAdvanced->setAutoDefault(false);
+        pbAdvanced->setFlat(true);
 
-        horizontalLayout_2->addWidget(lModoAvancado);
+        horizontalLayout_2->addWidget(pbAdvanced);
 
         lTextLogo = new QLabel(fClassificador);
         lTextLogo->setObjectName(QStringLiteral("lTextLogo"));
         lTextLogo->setStyleSheet(QStringLiteral("font: 22pt \"Roboto Bk\";"));
-        lTextLogo->setAlignment(Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft);
+        lTextLogo->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         horizontalLayout_2->addWidget(lTextLogo);
 
@@ -112,10 +116,17 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer_2);
 
-        pushButton = new QPushButton(fClassificador);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pbMenu = new QPushButton(fClassificador);
+        pbMenu->setObjectName(QStringLiteral("pbMenu"));
+        pbMenu->setFocusPolicy(Qt::NoFocus);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/icon/img/icon/logoMenu.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbMenu->setIcon(icon1);
+        pbMenu->setIconSize(QSize(25, 25));
+        pbMenu->setAutoDefault(false);
+        pbMenu->setFlat(true);
 
-        horizontalLayout_3->addWidget(pushButton);
+        horizontalLayout_3->addWidget(pbMenu);
 
 
         verticalLayout_3->addLayout(horizontalLayout_3);
@@ -132,65 +143,115 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
-        pushButton_2 = new QPushButton(fClassificador);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pbInput = new QPushButton(fClassificador);
+        pbInput->setObjectName(QStringLiteral("pbInput"));
+        pbInput->setFocusPolicy(Qt::WheelFocus);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/icon/img/icon/logoInput.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbInput->setIcon(icon2);
+        pbInput->setIconSize(QSize(25, 25));
+        pbInput->setAutoDefault(false);
+        pbInput->setFlat(true);
 
-        horizontalLayout_4->addWidget(pushButton_2);
+        horizontalLayout_4->addWidget(pbInput);
 
-        pushButton_3 = new QPushButton(fClassificador);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pbOutput = new QPushButton(fClassificador);
+        pbOutput->setObjectName(QStringLiteral("pbOutput"));
+        pbOutput->setFocusPolicy(Qt::WheelFocus);
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/icon/img/icon/logoOutput.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbOutput->setIcon(icon3);
+        pbOutput->setIconSize(QSize(25, 25));
+        pbOutput->setAutoDefault(false);
+        pbOutput->setFlat(true);
 
-        horizontalLayout_4->addWidget(pushButton_3);
+        horizontalLayout_4->addWidget(pbOutput);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_4->addItem(horizontalSpacer_3);
 
-        pushButton_4 = new QPushButton(fClassificador);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pbLixeira = new QPushButton(fClassificador);
+        pbLixeira->setObjectName(QStringLiteral("pbLixeira"));
+        pbLixeira->setFocusPolicy(Qt::WheelFocus);
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/icon/img/icon/logoLixeira.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbLixeira->setIcon(icon4);
+        pbLixeira->setIconSize(QSize(25, 25));
+        pbLixeira->setAutoDefault(false);
+        pbLixeira->setFlat(true);
 
-        horizontalLayout_4->addWidget(pushButton_4);
+        horizontalLayout_4->addWidget(pbLixeira);
 
 
         verticalLayout->addLayout(horizontalLayout_4);
 
         scrollArea = new QScrollArea(fClassificador);
         scrollArea->setObjectName(QStringLiteral("scrollArea"));
+        scrollArea->setFocusPolicy(Qt::NoFocus);
         scrollArea->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 414, 397));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 382, 368));
         scrollArea->setWidget(scrollAreaWidgetContents);
 
         verticalLayout->addWidget(scrollArea);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
-        pushButton_5 = new QPushButton(fClassificador);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pbExtrair = new QPushButton(fClassificador);
+        pbExtrair->setObjectName(QStringLiteral("pbExtrair"));
+        pbExtrair->setFocusPolicy(Qt::NoFocus);
+        QIcon icon5;
+        icon5.addFile(QStringLiteral(":/icon/img/icon/logoExtrair.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbExtrair->setIcon(icon5);
+        pbExtrair->setIconSize(QSize(25, 25));
+        pbExtrair->setAutoDefault(false);
+        pbExtrair->setFlat(true);
 
-        horizontalLayout_5->addWidget(pushButton_5);
+        horizontalLayout_5->addWidget(pbExtrair);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout_5->addItem(horizontalSpacer_4);
 
-        pushButton_6 = new QPushButton(fClassificador);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pbSalvar = new QPushButton(fClassificador);
+        pbSalvar->setObjectName(QStringLiteral("pbSalvar"));
+        pbSalvar->setFocusPolicy(Qt::NoFocus);
+        QIcon icon6;
+        icon6.addFile(QStringLiteral(":/icon/img/icon/logoSalvar.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbSalvar->setIcon(icon6);
+        pbSalvar->setIconSize(QSize(25, 25));
+        pbSalvar->setAutoDefault(false);
+        pbSalvar->setFlat(true);
 
-        horizontalLayout_5->addWidget(pushButton_6);
+        horizontalLayout_5->addWidget(pbSalvar);
 
-        pushButton_7 = new QPushButton(fClassificador);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pbImprimir = new QPushButton(fClassificador);
+        pbImprimir->setObjectName(QStringLiteral("pbImprimir"));
+        pbImprimir->setFocusPolicy(Qt::NoFocus);
+        QIcon icon7;
+        icon7.addFile(QStringLiteral(":/icon/img/icon/logoImprimir.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbImprimir->setIcon(icon7);
+        pbImprimir->setIconSize(QSize(25, 25));
+        pbImprimir->setAutoDefault(false);
+        pbImprimir->setFlat(true);
 
-        horizontalLayout_5->addWidget(pushButton_7);
+        horizontalLayout_5->addWidget(pbImprimir);
 
-        pushButton_8 = new QPushButton(fClassificador);
-        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        pbEncaminhar = new QPushButton(fClassificador);
+        pbEncaminhar->setObjectName(QStringLiteral("pbEncaminhar"));
+        pbEncaminhar->setFocusPolicy(Qt::NoFocus);
+        QIcon icon8;
+        icon8.addFile(QStringLiteral(":/icon/img/icon/logoEcaminhar.svg"), QSize(), QIcon::Normal, QIcon::Off);
+        pbEncaminhar->setIcon(icon8);
+        pbEncaminhar->setIconSize(QSize(25, 25));
+        pbEncaminhar->setAutoDefault(false);
+        pbEncaminhar->setFlat(true);
 
-        horizontalLayout_5->addWidget(pushButton_8);
+        horizontalLayout_5->addWidget(pbEncaminhar);
 
 
         verticalLayout->addLayout(horizontalLayout_5);
@@ -202,12 +263,13 @@ public:
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         scrollArea_2 = new QScrollArea(fClassificador);
         scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
+        scrollArea_2->setFocusPolicy(Qt::NoFocus);
         scrollArea_2->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
         scrollArea_2->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 350, 481));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 382, 466));
         scrollArea_2->setWidget(scrollAreaWidgetContents_2);
 
         verticalLayout_2->addWidget(scrollArea_2);
@@ -250,22 +312,25 @@ public:
 
         retranslateUi(DClassificador);
 
+        pbEncaminhar->setDefault(false);
+
+
         QMetaObject::connectSlotsByName(DClassificador);
     } // setupUi
 
     void retranslateUi(QDialog *DClassificador)
     {
-        DClassificador->setWindowTitle(QApplication::translate("DClassificador", "Dialog", Q_NULLPTR));
-        lModoAvancado->setText(QString());
+        DClassificador->setWindowTitle(QApplication::translate("DClassificador", "Classcau - Classificador", Q_NULLPTR));
+        pbAdvanced->setText(QString());
         lTextLogo->setText(QApplication::translate("DClassificador", "<html><head/><body><p><span style=\" color:#f6f4f4;\">Class</span><span style=\" color:#faad19;\">cau</span></p></body></html>", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_2->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_3->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_4->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_5->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_6->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_7->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
-        pushButton_8->setText(QApplication::translate("DClassificador", "PushButton", Q_NULLPTR));
+        pbMenu->setText(QString());
+        pbInput->setText(QString());
+        pbOutput->setText(QString());
+        pbLixeira->setText(QString());
+        pbExtrair->setText(QString());
+        pbSalvar->setText(QString());
+        pbImprimir->setText(QString());
+        pbEncaminhar->setText(QString());
         label->setText(QApplication::translate("DClassificador", "Vers\303\243o 1.0", Q_NULLPTR));
         label_2->setText(QApplication::translate("DClassificador", ">devferraz_", Q_NULLPTR));
     } // retranslateUi

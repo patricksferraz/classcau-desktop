@@ -18,6 +18,12 @@ public:
 private slots:
     void on_pbClassificador_clicked();
 
+    void on_pbBuscar_clicked();
+
+    void on_pbAutonomo_clicked();
+
+    void on_pbConfiguracoes_clicked();
+
 private:
     Ui::DTelaInicial *ui;
 };

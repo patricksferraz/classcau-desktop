@@ -39,7 +39,7 @@ public:
     QLabel *lTextLogo;
     QLineEdit *lUsuario;
     QLineEdit *lSenha;
-    QLabel *lEsqueceuSenha;
+    QPushButton *pushButton;
     QHBoxLayout *hbLogin;
     QPushButton *pbSair;
     QPushButton *pbEntrar;
@@ -122,13 +122,14 @@ public:
 
         vbLogin->addWidget(lSenha);
 
-        lEsqueceuSenha = new QLabel(fLogin);
-        lEsqueceuSenha->setObjectName(QStringLiteral("lEsqueceuSenha"));
-        lEsqueceuSenha->setStyleSheet(QLatin1String("font: 57 10pt \"Roboto\";\n"
-"color: rgb(246, 244, 244);"));
-        lEsqueceuSenha->setAlignment(Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing);
+        pushButton = new QPushButton(fLogin);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setFocusPolicy(Qt::WheelFocus);
+        pushButton->setStyleSheet(QLatin1String("color: rgb(246, 244, 244);\n"
+"font: 25 10pt \"Roboto\";"));
+        pushButton->setFlat(true);
 
-        vbLogin->addWidget(lEsqueceuSenha);
+        vbLogin->addWidget(pushButton);
 
         hbLogin = new QHBoxLayout();
         hbLogin->setSpacing(6);
@@ -193,7 +194,7 @@ public:
         lTextLogo->setText(QApplication::translate("WLogin", "<html><head/><body><p><span style=\" color:#f6f4f4;\">Class</span><span style=\" color:#faad19;\">cau</span></p></body></html>", Q_NULLPTR));
         lUsuario->setPlaceholderText(QApplication::translate("WLogin", "Usu\303\241rio:", Q_NULLPTR));
         lSenha->setPlaceholderText(QApplication::translate("WLogin", "Senha:", Q_NULLPTR));
-        lEsqueceuSenha->setText(QApplication::translate("WLogin", "Esqueceu a senha?", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("WLogin", "Esqueceu a senha?", Q_NULLPTR));
         pbSair->setText(QApplication::translate("WLogin", "Sair", Q_NULLPTR));
         pbEntrar->setText(QApplication::translate("WLogin", "Entrar", Q_NULLPTR));
         lDeveloper->setText(QApplication::translate("WLogin", ">devferraz_", Q_NULLPTR));

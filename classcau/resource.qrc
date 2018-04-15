@@ -6,7 +6,23 @@
         <file>img/icon/logoConfiguracoes.svg</file>
         <file>img/icon/logoSair.svg</file>
         <file>img/icon/pLogoClasscau.svg</file>
-        <file>img/icon/tLogoClasscau.svg</file>
         <file>img/icon/tcLogoClasscau.svg</file>
+        <file>img/icon/logoMenu.svg</file>
+        <file>img/icon/logoMenuc.svg</file>
+        <file>img/icon/logoEcaminhar.svg</file>
+        <file>img/icon/logoExtrair.svg</file>
+        <file>img/icon/logoImprimir.svg</file>
+        <file>img/icon/logoInput.svg</file>
+        <file>img/icon/logoLixeira.svg</file>
+        <file>img/icon/logoOutput.svg</file>
+        <file>img/icon/logoSalvar.svg</file>
+        <file>img/icon/logoInfo.svg</file>
+        <file>img/icon/logoQrCode.svg</file>
+        <file>img/icon/logoComparar.svg</file>
+        <file>img/icon/logoEcaminharm.svg</file>
+        <file>img/icon/logoImprimirm.svg</file>
+        <file>img/icon/logoLixeiram.svg</file>
+        <file>img/icon/logoBuscarc.svg</file>
+        <file>img/icon/logoPower.svg</file>
     </qresource>
 </RCC>

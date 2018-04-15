@@ -94,6 +94,9 @@
       </item>
       <item row="1" column="1" rowspan="2">
        <layout class="QVBoxLayout" name="vbLogin">
+        <property name="spacing">
+         <number>6</number>
+        </property>
         <item>
          <widget class="QLabel" name="lImgLogo">
           <property name="font">
@@ -159,16 +162,19 @@ background-color: rgb(246, 244, 244);</string>
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="lEsqueceuSenha">
+         <widget class="QPushButton" name="pushButton">
+          <property name="focusPolicy">
+           <enum>Qt::WheelFocus</enum>
+          </property>
           <property name="styleSheet">
-           <string notr="true">font: 57 10pt &quot;Roboto&quot;;
-color: rgb(246, 244, 244);</string>
+           <string notr="true">color: rgb(246, 244, 244);
+font: 25 10pt &quot;Roboto&quot;;</string>
           </property>
           <property name="text">
            <string>Esqueceu a senha?</string>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+          <property name="flat">
+           <bool>true</bool>
           </property>
          </widget>
         </item>

@@ -1,6 +1,9 @@
 #include "dtelainicial.h"
 #include "ui_dtelainicial.h"
 #include "dclassificador.h"
+#include "dbuscador.h"
+#include "dautonomia.h"
+#include "dconfiguracoes.h"
 
 DTelaInicial::DTelaInicial(QWidget *parent) :
     QDialog(parent),
@@ -19,4 +22,25 @@ void DTelaInicial::on_pbClassificador_clicked()
     DClassificador dClassificador;
     dClassificador.setModal(true);
     dClassificador.exec();
+}
+
+void DTelaInicial::on_pbBuscar_clicked()
+{
+    DBuscador dBuscador;
+    dBuscador.setModal(true);
+    dBuscador.exec();
+}
+
+void DTelaInicial::on_pbAutonomo_clicked()
+{
+    DAutonomia dAutonomia;
+    dAutonomia.setModal(true);
+    dAutonomia.exec();
+}
+
+void DTelaInicial::on_pbConfiguracoes_clicked()
+{
+    DConfiguracoes dConfiguracoes;
+    dConfiguracoes.setModal(true);
+    dConfiguracoes.exec();
 }

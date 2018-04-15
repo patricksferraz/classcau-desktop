@@ -26,15 +26,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += main.cpp\
         wlogin.cpp \
     dtelainicial.cpp \
-    dclassificador.cpp
+    dclassificador.cpp \
+    dbuscador.cpp \
+    dautonomia.cpp \
+    dconfiguracoes.cpp
 
 HEADERS  += wlogin.h \
     dtelainicial.h \
-    dclassificador.h
+    dclassificador.h \
+    dbuscador.h \
+    dautonomia.h \
+    dconfiguracoes.h
 
 FORMS    += wlogin.ui \
     dtelainicial.ui \
-    dclassificador.ui
+    dclassificador.ui \
+    dbuscador.ui \
+    dautonomia.ui \
+    dconfiguracoes.ui
 
 RESOURCES += \
     resource.qrc

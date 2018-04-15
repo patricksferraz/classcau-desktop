@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Classcau - Classificador</string>
   </property>
   <layout class="QGridLayout" name="glClassificador">
    <property name="leftMargin">
@@ -63,30 +63,37 @@
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_2">
             <property name="spacing">
-             <number>6</number>
+             <number>0</number>
             </property>
             <property name="leftMargin">
-             <number>6</number>
+             <number>0</number>
             </property>
             <property name="topMargin">
-             <number>6</number>
+             <number>0</number>
             </property>
             <item>
-             <widget class="QLabel" name="lModoAvancado">
-              <property name="maximumSize">
-               <size>
-                <width>277</width>
-                <height>16777215</height>
-               </size>
+             <widget class="QPushButton" name="pbAdvanced">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
               </property>
               <property name="text">
                <string/>
               </property>
-              <property name="pixmap">
-               <pixmap resource="resource.qrc">:/icon/img/icon/tLogoClasscau.svg</pixmap>
+              <property name="icon">
+               <iconset resource="resource.qrc">
+                <normaloff>:/icon/img/icon/pLogoClasscau.svg</normaloff>:/icon/img/icon/pLogoClasscau.svg</iconset>
               </property>
-              <property name="alignment">
-               <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+              <property name="iconSize">
+               <size>
+                <width>40</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -99,7 +106,7 @@
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#f6f4f4;&quot;&gt;Class&lt;/span&gt;&lt;span style=&quot; color:#faad19;&quot;&gt;cau&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
               </property>
              </widget>
             </item>
@@ -119,9 +126,28 @@
            </spacer>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton">
+           <widget class="QPushButton" name="pbMenu">
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
             <property name="text">
-             <string>PushButton</string>
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="resource.qrc">
+              <normaloff>:/icon/img/icon/logoMenu.svg</normaloff>:/icon/img/icon/logoMenu.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>25</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="autoDefault">
+             <bool>false</bool>
+            </property>
+            <property name="flat">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -165,16 +191,54 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
               <item>
-               <widget class="QPushButton" name="pushButton_2">
+               <widget class="QPushButton" name="pbInput">
+                <property name="focusPolicy">
+                 <enum>Qt::WheelFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoInput.svg</normaloff>:/icon/img/icon/logoInput.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_3">
+               <widget class="QPushButton" name="pbOutput">
+                <property name="focusPolicy">
+                 <enum>Qt::WheelFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoOutput.svg</normaloff>:/icon/img/icon/logoOutput.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -192,9 +256,28 @@
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_4">
+               <widget class="QPushButton" name="pbLixeira">
+                <property name="focusPolicy">
+                 <enum>Qt::WheelFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoLixeira.svg</normaloff>:/icon/img/icon/logoLixeira.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -202,6 +285,9 @@
             </item>
             <item>
              <widget class="QScrollArea" name="scrollArea">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
               <property name="styleSheet">
                <string notr="true">background-color: rgb(246, 244, 244);
 color: rgb(51, 23, 9);</string>
@@ -214,8 +300,8 @@ color: rgb(51, 23, 9);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>414</width>
-                 <height>397</height>
+                 <width>382</width>
+                 <height>368</height>
                 </rect>
                </property>
               </widget>
@@ -224,9 +310,28 @@ color: rgb(51, 23, 9);</string>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_5">
               <item>
-               <widget class="QPushButton" name="pushButton_5">
+               <widget class="QPushButton" name="pbExtrair">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoExtrair.svg</normaloff>:/icon/img/icon/logoExtrair.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -244,23 +349,83 @@ color: rgb(51, 23, 9);</string>
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_6">
+               <widget class="QPushButton" name="pbSalvar">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoSalvar.svg</normaloff>:/icon/img/icon/logoSalvar.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_7">
+               <widget class="QPushButton" name="pbImprimir">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoImprimir.svg</normaloff>:/icon/img/icon/logoImprimir.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_8">
+               <widget class="QPushButton" name="pbEncaminhar">
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="text">
-                 <string>PushButton</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="resource.qrc">
+                  <normaloff>:/icon/img/icon/logoEcaminhar.svg</normaloff>:/icon/img/icon/logoEcaminhar.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>25</width>
+                  <height>25</height>
+                 </size>
+                </property>
+                <property name="autoDefault">
+                 <bool>false</bool>
+                </property>
+                <property name="default">
+                 <bool>false</bool>
+                </property>
+                <property name="flat">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -272,6 +437,9 @@ color: rgb(51, 23, 9);</string>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
              <widget class="QScrollArea" name="scrollArea_2">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
               <property name="styleSheet">
                <string notr="true">background-color: rgb(246, 244, 244);
 color: rgb(51, 23, 9);</string>
@@ -284,8 +452,8 @@ color: rgb(51, 23, 9);</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>350</width>
-                 <height>481</height>
+                 <width>382</width>
+                 <height>466</height>
                 </rect>
                </property>
               </widget>
