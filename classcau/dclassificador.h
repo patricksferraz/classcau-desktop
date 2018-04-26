@@ -15,6 +15,11 @@ public:
     explicit DClassificador(QWidget *parent = 0);
     ~DClassificador();
 
+private slots:
+    void on_pbInput_clicked();
+
+    void on_pbExtrair_clicked();
+
 private:
     Ui::DClassificador *ui;
 };

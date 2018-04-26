@@ -48,7 +48,7 @@ public:
     QPushButton *pbOutput;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pbLixeira;
-    QScrollArea *scrollArea;
+    QScrollArea *saImagem;
     QWidget *scrollAreaWidgetContents;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pbExtrair;
@@ -142,6 +142,7 @@ public:
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         horizontalLayout_4 = new QHBoxLayout();
+        horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
         pbInput = new QPushButton(fClassificador);
         pbInput->setObjectName(QStringLiteral("pbInput"));
@@ -186,18 +187,16 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_4);
 
-        scrollArea = new QScrollArea(fClassificador);
-        scrollArea->setObjectName(QStringLiteral("scrollArea"));
-        scrollArea->setFocusPolicy(Qt::NoFocus);
-        scrollArea->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
-"color: rgb(51, 23, 9);"));
-        scrollArea->setWidgetResizable(true);
+        saImagem = new QScrollArea(fClassificador);
+        saImagem->setObjectName(QStringLiteral("saImagem"));
+        saImagem->setStyleSheet(QStringLiteral("background-color: rgb(246, 244, 244);"));
+        saImagem->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 382, 368));
-        scrollArea->setWidget(scrollAreaWidgetContents);
+        saImagem->setWidget(scrollAreaWidgetContents);
 
-        verticalLayout->addWidget(scrollArea);
+        verticalLayout->addWidget(saImagem);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));

@@ -190,6 +190,9 @@
            <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>6</number>
+              </property>
               <item>
                <widget class="QPushButton" name="pbInput">
                 <property name="focusPolicy">
@@ -284,13 +287,9 @@
              </layout>
             </item>
             <item>
-             <widget class="QScrollArea" name="scrollArea">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
+             <widget class="QScrollArea" name="saImagem">
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(246, 244, 244);
-color: rgb(51, 23, 9);</string>
+               <string notr="true">background-color: rgb(246, 244, 244);</string>
               </property>
               <property name="widgetResizable">
                <bool>true</bool>
