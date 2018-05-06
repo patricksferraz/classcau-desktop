@@ -40,14 +40,16 @@ void DClassificador::on_pbExtrair_clicked()
 {
     QStringList arguments { "/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau/segmentation_method.py", "/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau/class/achatada.jpg" };
     QProcess p;
-    if (file_name != NULL)
-    {
+//    if (file_name != NULL)
+//    {
         p.start("python3.5", arguments);
+        QString mensagem = "resultado do running " + p.state();
+        QMessageBox::information(this, "", mensagem);
         p.waitForFinished();
         QMessageBox::information(this, "Conclusão", "Segmentação realizada com sucesso");
-    }
-    else
-    {
-        QMessageBox::information(this, "Atenção", "Selecione uma imagem antes da segmentação");
-    }
+//    }
+//    else
+//    {
+//        QMessageBox::information(this, "Atenção", "Selecione uma imagem antes da segmentação");
+//    }
 }

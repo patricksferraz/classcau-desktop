@@ -54,7 +54,8 @@ SOURCES       = ../classcau/main.cpp \
 		../classcau/dclassificador.cpp \
 		../classcau/dbuscador.cpp \
 		../classcau/dautonomia.cpp \
-		../classcau/dconfiguracoes.cpp qrc_resource.cpp \
+		../classcau/dconfiguracoes.cpp \
+		../classcau/segmentador.cpp qrc_resource.cpp \
 		moc_wlogin.cpp \
 		moc_dtelainicial.cpp \
 		moc_dclassificador.cpp \
@@ -68,6 +69,7 @@ OBJECTS       = main.o \
 		dbuscador.o \
 		dautonomia.o \
 		dconfiguracoes.o \
+		segmentador.o \
 		qrc_resource.o \
 		moc_wlogin.o \
 		moc_dtelainicial.o \
@@ -170,13 +172,15 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../classcau/dclassificador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
-		../classcau/dconfiguracoes.h ../classcau/main.cpp \
+		../classcau/dconfiguracoes.h \
+		../classcau/segmentador.h ../classcau/main.cpp \
 		../classcau/wlogin.cpp \
 		../classcau/dtelainicial.cpp \
 		../classcau/dclassificador.cpp \
 		../classcau/dbuscador.cpp \
 		../classcau/dautonomia.cpp \
-		../classcau/dconfiguracoes.cpp
+		../classcau/dconfiguracoes.cpp \
+		../classcau/segmentador.cpp
 QMAKE_TARGET  = classcau
 DESTDIR       = 
 TARGET        = classcau
@@ -394,8 +398,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../classcau/resource.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h ../classcau/segmentador.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp ../classcau/segmentador.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../classcau/wlogin.ui ../classcau/dtelainicial.ui ../classcau/dclassificador.ui ../classcau/dbuscador.ui ../classcau/dautonomia.ui ../classcau/dconfiguracoes.ui $(DISTDIR)/
 
 
@@ -548,6 +552,9 @@ dautonomia.o: ../classcau/dautonomia.cpp ../classcau/dautonomia.h \
 dconfiguracoes.o: ../classcau/dconfiguracoes.cpp ../classcau/dconfiguracoes.h \
 		ui_dconfiguracoes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dconfiguracoes.o ../classcau/dconfiguracoes.cpp
+
+segmentador.o: ../classcau/segmentador.cpp ../classcau/segmentador.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o segmentador.o ../classcau/segmentador.cpp
 
 qrc_resource.o: qrc_resource.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp

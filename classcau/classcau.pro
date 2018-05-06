@@ -29,14 +29,16 @@ SOURCES += main.cpp\
     dclassificador.cpp \
     dbuscador.cpp \
     dautonomia.cpp \
-    dconfiguracoes.cpp
+    dconfiguracoes.cpp \
+    segmentador.cpp
 
 HEADERS  += wlogin.h \
     dtelainicial.h \
     dclassificador.h \
     dbuscador.h \
     dautonomia.h \
-    dconfiguracoes.h
+    dconfiguracoes.h \
+    segmentador.h
 
 FORMS    += wlogin.ui \
     dtelainicial.ui \
