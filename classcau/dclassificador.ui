@@ -435,7 +435,7 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QScrollArea" name="scrollArea_2">
+             <widget class="QScrollArea" name="saResult">
               <property name="focusPolicy">
                <enum>Qt::NoFocus</enum>
               </property>

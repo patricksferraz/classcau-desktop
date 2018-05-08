@@ -57,7 +57,7 @@ public:
     QPushButton *pbImprimir;
     QPushButton *pbEncaminhar;
     QVBoxLayout *verticalLayout_2;
-    QScrollArea *scrollArea_2;
+    QScrollArea *saResult;
     QWidget *scrollAreaWidgetContents_2;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
@@ -260,18 +260,18 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        scrollArea_2 = new QScrollArea(fClassificador);
-        scrollArea_2->setObjectName(QStringLiteral("scrollArea_2"));
-        scrollArea_2->setFocusPolicy(Qt::NoFocus);
-        scrollArea_2->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
+        saResult = new QScrollArea(fClassificador);
+        saResult->setObjectName(QStringLiteral("saResult"));
+        saResult->setFocusPolicy(Qt::NoFocus);
+        saResult->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
-        scrollArea_2->setWidgetResizable(true);
+        saResult->setWidgetResizable(true);
         scrollAreaWidgetContents_2 = new QWidget();
         scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
         scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 382, 466));
-        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+        saResult->setWidget(scrollAreaWidgetContents_2);
 
-        verticalLayout_2->addWidget(scrollArea_2);
+        verticalLayout_2->addWidget(saResult);
 
 
         horizontalLayout_6->addLayout(verticalLayout_2);

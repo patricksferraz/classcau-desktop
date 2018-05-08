@@ -3,6 +3,7 @@
 
 #include <opencv2/opencv.hpp>
 
+using namespace std;
 using namespace cv;
 
 class Segmentador
@@ -10,6 +11,7 @@ class Segmentador
     string folder_samples;
     string folder_result;
     string generated_format;
+    string caminho_raiz;
     string n_image;
     Mat image, bg, bgt, res;
     vector<vector<Point>> contours;

@@ -5,11 +5,13 @@ Segmentador::Segmentador(string path)
     folder_samples = "samples";
     folder_result = "result";
     generated_format = "png";
+    caminho_raiz = "/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau/";
     image = imread(path);
     n_image = "temp";
     Mat canny_image = first_pass();
     second_pass(n_image, canny_image);
     third_pass();
+    fourth_pass(n_image);
 }
 
 Mat Segmentador::first_pass()
@@ -40,7 +42,7 @@ Mat Segmentador::first_pass()
     return canny_image;
 }
 
-void Segmentador::second_pass(string image_in, Mat canny_image)
+void Segmentador::second_pass(string n_image, Mat canny_image)
 {
     Mat m, thresh, thresh_inv, res, res2, res3;
     vector<Vec4i> hierarchy;
@@ -72,7 +74,7 @@ void Segmentador::second_pass(string image_in, Mat canny_image)
     drawContours(res3, contours, -1, Scalar(0, 255, 0));
     // imshow("draw_contours", res3);//
     // waitKey();//
-    imwrite(folder_result + "/" + image_in + "." + generated_format, res3);
+    imwrite(caminho_raiz + folder_result + "/" + n_image + "." + generated_format, res3);
 }
 
 void Segmentador::third_pass()
@@ -98,19 +100,16 @@ void Segmentador::third_pass()
 
 void Segmentador::fourth_pass(string n_image)
 {
-    //Rect x;
-    //Mat new_img;
-    //int idx = 0, count = 0;
-    //vector<Rect> boundRect( contours.size() );
-
-    // foreach (c, contours) {
-    //     x = boundingRect(c);
-    //     idx += 1;
-    //     if(idx % 2 == 0)
-    //     {
-    //         count += 1;
-    //         new_img = self.res[y:y+h,x:x+w]
-    //         // cv2.imwrite("%s/%s_%s.%s" %(self.folder_samples,image_in,count,self.generated_format), new_img)
-    //     }
-    // }
+    Mat new_img;
+    Rect rect;
+    int idx = 0, count = 0;
+    for (unsigned int i = 0; i < contours.size(); i++) {
+      rect = boundingRect(contours[i]);
+      idx += 1;
+      if (idx % 2 == 0) {
+        count += 1;
+        new_img = res(rect);
+        imwrite(caminho_raiz + folder_samples + "/" + n_image + "_" + to_string(count) + "." + generated_format, new_img);
+      }
+    }
 }
