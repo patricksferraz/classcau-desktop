@@ -246,7 +246,7 @@ public:
         lTextLogo->setText(QApplication::translate("DAutonomia", "<html><head/><body><p><span style=\" color:#f6f4f4;\">Class</span><span style=\" color:#faad19;\">cau</span></p></body></html>", Q_NULLPTR));
         pbPower->setText(QString());
         label->setText(QApplication::translate("DAutonomia", "Vers\303\243o 1.0", Q_NULLPTR));
-        label_2->setText(QApplication::translate("DAutonomia", ">devferraz_", Q_NULLPTR));
+        label_2->setText(QApplication::translate("DAutonomia", "patriskferraz", Q_NULLPTR));
     } // retranslateUi
 
 };

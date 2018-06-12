@@ -2,6 +2,10 @@
 #define DTELAINICIAL_H
 
 #include <QDialog>
+#include "dclassificador.h"
+#include "dbuscador.h"
+#include "dautonomia.h"
+#include "dconfiguracoes.h"
 
 namespace Ui {
 class DTelaInicial;

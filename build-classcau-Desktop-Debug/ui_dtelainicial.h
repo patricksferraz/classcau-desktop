@@ -335,7 +335,7 @@ public:
         pbConfiguracoes->setText(QApplication::translate("DTelaInicial", "Configura\303\247\303\265es", Q_NULLPTR));
         pbClassificador->setText(QApplication::translate("DTelaInicial", "Classificador", Q_NULLPTR));
         label->setText(QApplication::translate("DTelaInicial", "Vers\303\243o 1.0", Q_NULLPTR));
-        label_2->setText(QApplication::translate("DTelaInicial", ">devferraz_", Q_NULLPTR));
+        label_2->setText(QApplication::translate("DTelaInicial", "patriskferraz", Q_NULLPTR));
     } // retranslateUi
 
 };

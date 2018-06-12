@@ -1,6 +1,5 @@
 #include "wlogin.h"
 #include "ui_wlogin.h"
-#include "dtelainicial.h"
 
 WLogin::WLogin(QWidget *parent) :
     QWidget(parent),

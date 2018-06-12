@@ -327,7 +327,7 @@ public:
         pbImprimir->setText(QString());
         pbComparar->setText(QString());
         label_2->setText(QApplication::translate("DBuscador", "Vers\303\243o 1.0", Q_NULLPTR));
-        label_3->setText(QApplication::translate("DBuscador", ">devferraz_", Q_NULLPTR));
+        label_3->setText(QApplication::translate("DBuscador", "patriskferraz", Q_NULLPTR));
     } // retranslateUi
 
 };

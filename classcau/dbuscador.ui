@@ -401,7 +401,6 @@ font: 10pt &quot;Roboto Bk&quot;;</string>
                  <height>352</height>
                 </rect>
                </property>
-               <zorder>scrollArea_2</zorder>
               </widget>
              </widget>
             </item>
@@ -462,7 +461,7 @@ color: rgb(246, 244, 244);</string>
 color: rgb(246, 244, 244);</string>
             </property>
             <property name="text">
-             <string>&gt;devferraz_</string>
+             <string>patriskferraz</string>
             </property>
            </widget>
           </item>

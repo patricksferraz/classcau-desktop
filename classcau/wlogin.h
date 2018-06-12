@@ -2,6 +2,7 @@
 #define WLOGIN_H
 
 #include <QWidget>
+#include "dtelainicial.h"
 
 namespace Ui {
 class WLogin;

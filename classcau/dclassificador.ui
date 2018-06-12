@@ -287,23 +287,11 @@
              </layout>
             </item>
             <item>
-             <widget class="QScrollArea" name="saImagem">
+             <widget class="CustomView" name="gvImage">
               <property name="styleSheet">
-               <string notr="true">background-color: rgb(246, 244, 244);</string>
+               <string notr="true">background-color: rgb(246, 244, 244);
+color: rgb(51, 23, 9);</string>
               </property>
-              <property name="widgetResizable">
-               <bool>true</bool>
-              </property>
-              <widget class="QWidget" name="scrollAreaWidgetContents">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>382</width>
-                 <height>368</height>
-                </rect>
-               </property>
-              </widget>
              </widget>
             </item>
             <item>
@@ -435,27 +423,11 @@
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="QScrollArea" name="saResult">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
+             <widget class="CustomView" name="gvResult">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(246, 244, 244);
 color: rgb(51, 23, 9);</string>
               </property>
-              <property name="widgetResizable">
-               <bool>true</bool>
-              </property>
-              <widget class="QWidget" name="scrollAreaWidgetContents_2">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>382</width>
-                 <height>466</height>
-                </rect>
-               </property>
-              </widget>
              </widget>
             </item>
            </layout>
@@ -495,7 +467,7 @@ color: rgb(246, 244, 244);</string>
 color: rgb(246, 244, 244);</string>
             </property>
             <property name="text">
-             <string>&gt;devferraz_</string>
+             <string>patriskferraz</string>
             </property>
            </widget>
           </item>
@@ -509,6 +481,13 @@ color: rgb(246, 244, 244);</string>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomView</class>
+   <extends>QGraphicsView</extends>
+   <header>customview.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resource.qrc"/>
  </resources>

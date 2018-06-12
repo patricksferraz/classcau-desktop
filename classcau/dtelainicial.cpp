@@ -1,9 +1,5 @@
 #include "dtelainicial.h"
 #include "ui_dtelainicial.h"
-#include "dclassificador.h"
-#include "dbuscador.h"
-#include "dautonomia.h"
-#include "dconfiguracoes.h"
 
 DTelaInicial::DTelaInicial(QWidget *parent) :
     QDialog(parent),

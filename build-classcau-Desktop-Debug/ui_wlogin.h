@@ -197,7 +197,7 @@ public:
         pushButton->setText(QApplication::translate("WLogin", "Esqueceu a senha?", Q_NULLPTR));
         pbSair->setText(QApplication::translate("WLogin", "Sair", Q_NULLPTR));
         pbEntrar->setText(QApplication::translate("WLogin", "Entrar", Q_NULLPTR));
-        lDeveloper->setText(QApplication::translate("WLogin", ">devferraz_", Q_NULLPTR));
+        lDeveloper->setText(QApplication::translate("WLogin", "patriskferraz", Q_NULLPTR));
         lVersion->setText(QApplication::translate("WLogin", "Vers\303\243o 1.0", Q_NULLPTR));
     } // retranslateUi
 

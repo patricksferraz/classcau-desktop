@@ -240,7 +240,7 @@ background-color: rgb(250, 173, 25);</string>
          <string notr="true">font: 10pt &quot;Roboto Bk&quot;;</string>
         </property>
         <property name="text">
-         <string>&gt;devferraz_</string>
+         <string>patriskferraz</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>

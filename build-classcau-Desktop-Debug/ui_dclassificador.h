@@ -20,10 +20,9 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
+#include "customview.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -48,8 +47,7 @@ public:
     QPushButton *pbOutput;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pbLixeira;
-    QScrollArea *saImagem;
-    QWidget *scrollAreaWidgetContents;
+    CustomView *gvImage;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pbExtrair;
     QSpacerItem *horizontalSpacer_4;
@@ -57,8 +55,7 @@ public:
     QPushButton *pbImprimir;
     QPushButton *pbEncaminhar;
     QVBoxLayout *verticalLayout_2;
-    QScrollArea *saResult;
-    QWidget *scrollAreaWidgetContents_2;
+    CustomView *gvResult;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
@@ -187,16 +184,12 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_4);
 
-        saImagem = new QScrollArea(fClassificador);
-        saImagem->setObjectName(QStringLiteral("saImagem"));
-        saImagem->setStyleSheet(QStringLiteral("background-color: rgb(246, 244, 244);"));
-        saImagem->setWidgetResizable(true);
-        scrollAreaWidgetContents = new QWidget();
-        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 382, 368));
-        saImagem->setWidget(scrollAreaWidgetContents);
+        gvImage = new CustomView(fClassificador);
+        gvImage->setObjectName(QStringLiteral("gvImage"));
+        gvImage->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
+"color: rgb(51, 23, 9);"));
 
-        verticalLayout->addWidget(saImagem);
+        verticalLayout->addWidget(gvImage);
 
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
@@ -260,18 +253,12 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        saResult = new QScrollArea(fClassificador);
-        saResult->setObjectName(QStringLiteral("saResult"));
-        saResult->setFocusPolicy(Qt::NoFocus);
-        saResult->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
+        gvResult = new CustomView(fClassificador);
+        gvResult->setObjectName(QStringLiteral("gvResult"));
+        gvResult->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
-        saResult->setWidgetResizable(true);
-        scrollAreaWidgetContents_2 = new QWidget();
-        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
-        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 382, 466));
-        saResult->setWidget(scrollAreaWidgetContents_2);
 
-        verticalLayout_2->addWidget(saResult);
+        verticalLayout_2->addWidget(gvResult);
 
 
         horizontalLayout_6->addLayout(verticalLayout_2);
@@ -331,7 +318,7 @@ public:
         pbImprimir->setText(QString());
         pbEncaminhar->setText(QString());
         label->setText(QApplication::translate("DClassificador", "Vers\303\243o 1.0", Q_NULLPTR));
-        label_2->setText(QApplication::translate("DClassificador", ">devferraz_", Q_NULLPTR));
+        label_2->setText(QApplication::translate("DClassificador", "patriskferraz", Q_NULLPTR));
     } // retranslateUi
 
 };
