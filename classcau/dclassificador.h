@@ -4,7 +4,7 @@
 #include <QDialog>
 #include <QFileDialog>
 #include <QDir>
-#include "segmenter.h"
+#include "segmentador.h"
 
 #include <QPixmap>
 #include <QMessageBox>

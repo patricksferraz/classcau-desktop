@@ -32,7 +32,7 @@ void DClassificador::on_pbExtrair_clicked()
 {
     if (file_name != NULL)
     {
-        Segmenter seg(file_name.toStdString()); // Segmentando a imagem path
+        Segmentador seg(file_name.toStdString()); // Segmentando a imagem path
         QImage imgResult("/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau/result/temp.png"); // Preparando imagem resultado para exibição
         itemOut = new QGraphicsPixmapItem(QPixmap::fromImage(imgResult));
         sceneOut = new QGraphicsScene(this);

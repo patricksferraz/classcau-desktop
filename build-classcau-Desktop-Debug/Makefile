@@ -56,7 +56,7 @@ SOURCES       = ../classcau/main.cpp \
 		../classcau/dautonomia.cpp \
 		../classcau/dconfiguracoes.cpp \
 		../classcau/customview.cpp \
-		../classcau/segmenter.cpp qrc_resource.cpp \
+		../classcau/segmentador.cpp qrc_resource.cpp \
 		moc_wlogin.cpp \
 		moc_dtelainicial.cpp \
 		moc_dclassificador.cpp \
@@ -71,7 +71,7 @@ OBJECTS       = main.o \
 		dautonomia.o \
 		dconfiguracoes.o \
 		customview.o \
-		segmenter.o \
+		segmentador.o \
 		qrc_resource.o \
 		moc_wlogin.o \
 		moc_dtelainicial.o \
@@ -176,7 +176,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
 		../classcau/customview.h \
-		../classcau/segmenter.h ../classcau/main.cpp \
+		../classcau/segmentador.h ../classcau/main.cpp \
 		../classcau/wlogin.cpp \
 		../classcau/dtelainicial.cpp \
 		../classcau/dclassificador.cpp \
@@ -184,7 +184,7 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../classcau/dautonomia.cpp \
 		../classcau/dconfiguracoes.cpp \
 		../classcau/customview.cpp \
-		../classcau/segmenter.cpp
+		../classcau/segmentador.cpp
 QMAKE_TARGET  = classcau
 DESTDIR       = 
 TARGET        = classcau
@@ -402,8 +402,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../classcau/resource.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h ../classcau/customview.h ../classcau/segmenter.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp ../classcau/customview.cpp ../classcau/segmenter.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h ../classcau/customview.h ../classcau/segmentador.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp ../classcau/customview.cpp ../classcau/segmentador.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../classcau/wlogin.ui ../classcau/dtelainicial.ui ../classcau/dclassificador.ui ../classcau/dbuscador.ui ../classcau/dautonomia.ui ../classcau/dconfiguracoes.ui $(DISTDIR)/
 
 
@@ -464,7 +464,7 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) moc_wlogin.cpp moc_dtelainicial.cpp moc_dclassificador.cpp moc_dbuscador.cpp moc_dautonomia.cpp moc_dconfiguracoes.cpp
 moc_wlogin.cpp: ../classcau/dtelainicial.h \
 		../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
@@ -473,7 +473,7 @@ moc_wlogin.cpp: ../classcau/dtelainicial.h \
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau -I/usr/local/include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/6 -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6/backward -I/usr/lib/gcc/x86_64-linux-gnu/6/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../classcau/wlogin.h -o moc_wlogin.cpp
 
 moc_dtelainicial.cpp: ../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
@@ -481,7 +481,7 @@ moc_dtelainicial.cpp: ../classcau/dclassificador.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau -I/usr/local/include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/6 -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6/backward -I/usr/lib/gcc/x86_64-linux-gnu/6/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../classcau/dtelainicial.h -o moc_dtelainicial.cpp
 
-moc_dclassificador.cpp: ../classcau/segmenter.h \
+moc_dclassificador.cpp: ../classcau/segmentador.h \
 		../classcau/dclassificador.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau -I/usr/local/include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/6 -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6/backward -I/usr/lib/gcc/x86_64-linux-gnu/6/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../classcau/dclassificador.h -o moc_dclassificador.cpp
@@ -541,7 +541,7 @@ compiler_clean: compiler_rcc_clean compiler_moc_header_clean compiler_uic_clean
 main.o: ../classcau/main.cpp ../classcau/wlogin.h \
 		../classcau/dtelainicial.h \
 		../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h
@@ -550,7 +550,7 @@ main.o: ../classcau/main.cpp ../classcau/wlogin.h \
 wlogin.o: ../classcau/wlogin.cpp ../classcau/wlogin.h \
 		../classcau/dtelainicial.h \
 		../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
@@ -559,7 +559,7 @@ wlogin.o: ../classcau/wlogin.cpp ../classcau/wlogin.h \
 
 dtelainicial.o: ../classcau/dtelainicial.cpp ../classcau/dtelainicial.h \
 		../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
@@ -567,7 +567,7 @@ dtelainicial.o: ../classcau/dtelainicial.cpp ../classcau/dtelainicial.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dtelainicial.o ../classcau/dtelainicial.cpp
 
 dclassificador.o: ../classcau/dclassificador.cpp ../classcau/dclassificador.h \
-		../classcau/segmenter.h \
+		../classcau/segmentador.h \
 		ui_dclassificador.h \
 		../classcau/customview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dclassificador.o ../classcau/dclassificador.cpp
@@ -587,8 +587,8 @@ dconfiguracoes.o: ../classcau/dconfiguracoes.cpp ../classcau/dconfiguracoes.h \
 customview.o: ../classcau/customview.cpp ../classcau/customview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customview.o ../classcau/customview.cpp
 
-segmenter.o: ../classcau/segmenter.cpp ../classcau/segmenter.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o segmenter.o ../classcau/segmenter.cpp
+segmentador.o: ../classcau/segmentador.cpp ../classcau/segmentador.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o segmentador.o ../classcau/segmentador.cpp
 
 qrc_resource.o: qrc_resource.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp

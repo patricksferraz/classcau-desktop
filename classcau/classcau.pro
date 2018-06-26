@@ -38,7 +38,7 @@ SOURCES += main.cpp\
     dautonomia.cpp \
     dconfiguracoes.cpp \
     customview.cpp \
-    segmenter.cpp
+    segmentador.cpp
 
 HEADERS  += wlogin.h \
     dtelainicial.h \
@@ -47,7 +47,7 @@ HEADERS  += wlogin.h \
     dautonomia.h \
     dconfiguracoes.h \
     customview.h \
-    segmenter.h
+    segmentador.h
 
 FORMS    += wlogin.ui \
     dtelainicial.ui \
