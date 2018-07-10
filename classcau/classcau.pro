@@ -37,8 +37,9 @@ SOURCES += main.cpp\
     dbuscador.cpp \
     dautonomia.cpp \
     dconfiguracoes.cpp \
-    customview.cpp \
-    segmentador.cpp
+    segmentador.cpp \
+    dtemplate.cpp \
+    gvcustomview.cpp
 
 HEADERS  += wlogin.h \
     dtelainicial.h \
@@ -46,15 +47,17 @@ HEADERS  += wlogin.h \
     dbuscador.h \
     dautonomia.h \
     dconfiguracoes.h \
-    customview.h \
-    segmentador.h
+    segmentador.h \
+    dtemplate.h \
+    gvcustomview.h
 
 FORMS    += wlogin.ui \
     dtelainicial.ui \
     dclassificador.ui \
     dbuscador.ui \
     dautonomia.ui \
-    dconfiguracoes.ui
+    dconfiguracoes.ui \
+    dtemplate.ui
 
 RESOURCES += \
     resource.qrc

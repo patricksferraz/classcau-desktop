@@ -287,7 +287,7 @@
              </layout>
             </item>
             <item>
-             <widget class="CustomView" name="gvImage">
+             <widget class="GVCustomView" name="gvImage">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(246, 244, 244);
 color: rgb(51, 23, 9);</string>
@@ -423,7 +423,7 @@ color: rgb(51, 23, 9);</string>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_2">
             <item>
-             <widget class="CustomView" name="gvResult">
+             <widget class="GVCustomView" name="gvResult">
               <property name="styleSheet">
                <string notr="true">background-color: rgb(246, 244, 244);
 color: rgb(51, 23, 9);</string>
@@ -483,7 +483,7 @@ color: rgb(246, 244, 244);</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>CustomView</class>
+   <class>GVCustomView</class>
    <extends>QGraphicsView</extends>
    <header>customview.h</header>
   </customwidget>

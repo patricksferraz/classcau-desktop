@@ -55,14 +55,16 @@ SOURCES       = ../classcau/main.cpp \
 		../classcau/dbuscador.cpp \
 		../classcau/dautonomia.cpp \
 		../classcau/dconfiguracoes.cpp \
-		../classcau/customview.cpp \
-		../classcau/segmentador.cpp qrc_resource.cpp \
+		../classcau/segmentador.cpp \
+		../classcau/dtemplate.cpp \
+		../classcau/gvcustomview.cpp qrc_resource.cpp \
 		moc_wlogin.cpp \
 		moc_dtelainicial.cpp \
 		moc_dclassificador.cpp \
 		moc_dbuscador.cpp \
 		moc_dautonomia.cpp \
-		moc_dconfiguracoes.cpp
+		moc_dconfiguracoes.cpp \
+		moc_dtemplate.cpp
 OBJECTS       = main.o \
 		wlogin.o \
 		dtelainicial.o \
@@ -70,15 +72,17 @@ OBJECTS       = main.o \
 		dbuscador.o \
 		dautonomia.o \
 		dconfiguracoes.o \
-		customview.o \
 		segmentador.o \
+		dtemplate.o \
+		gvcustomview.o \
 		qrc_resource.o \
 		moc_wlogin.o \
 		moc_dtelainicial.o \
 		moc_dclassificador.o \
 		moc_dbuscador.o \
 		moc_dautonomia.o \
-		moc_dconfiguracoes.o
+		moc_dconfiguracoes.o \
+		moc_dtemplate.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -175,16 +179,18 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../classcau/dbuscador.h \
 		../classcau/dautonomia.h \
 		../classcau/dconfiguracoes.h \
-		../classcau/customview.h \
-		../classcau/segmentador.h ../classcau/main.cpp \
+		../classcau/segmentador.h \
+		../classcau/dtemplate.h \
+		../classcau/gvcustomview.h ../classcau/main.cpp \
 		../classcau/wlogin.cpp \
 		../classcau/dtelainicial.cpp \
 		../classcau/dclassificador.cpp \
 		../classcau/dbuscador.cpp \
 		../classcau/dautonomia.cpp \
 		../classcau/dconfiguracoes.cpp \
-		../classcau/customview.cpp \
-		../classcau/segmentador.cpp
+		../classcau/segmentador.cpp \
+		../classcau/dtemplate.cpp \
+		../classcau/gvcustomview.cpp
 QMAKE_TARGET  = classcau
 DESTDIR       = 
 TARGET        = classcau
@@ -193,7 +199,7 @@ TARGET        = classcau
 first: all
 ####### Build rules
 
-$(TARGET): ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h $(OBJECTS)  
+$(TARGET): ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h ui_dtemplate.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../classcau/classcau.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -402,9 +408,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../classcau/resource.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h ../classcau/customview.h ../classcau/segmentador.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp ../classcau/customview.cpp ../classcau/segmentador.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../classcau/wlogin.ui ../classcau/dtelainicial.ui ../classcau/dclassificador.ui ../classcau/dbuscador.ui ../classcau/dautonomia.ui ../classcau/dconfiguracoes.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/wlogin.h ../classcau/dtelainicial.h ../classcau/dclassificador.h ../classcau/dbuscador.h ../classcau/dautonomia.h ../classcau/dconfiguracoes.h ../classcau/segmentador.h ../classcau/dtemplate.h ../classcau/gvcustomview.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/main.cpp ../classcau/wlogin.cpp ../classcau/dtelainicial.cpp ../classcau/dclassificador.cpp ../classcau/dbuscador.cpp ../classcau/dautonomia.cpp ../classcau/dconfiguracoes.cpp ../classcau/segmentador.cpp ../classcau/dtemplate.cpp ../classcau/gvcustomview.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../classcau/wlogin.ui ../classcau/dtelainicial.ui ../classcau/dclassificador.ui ../classcau/dbuscador.ui ../classcau/dautonomia.ui ../classcau/dconfiguracoes.ui ../classcau/dtemplate.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -459,9 +465,9 @@ qrc_resource.cpp: ../classcau/resource.qrc \
 		../classcau/img/icon/logoOutput.svg
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name resource ../classcau/resource.qrc -o qrc_resource.cpp
 
-compiler_moc_header_make_all: moc_wlogin.cpp moc_dtelainicial.cpp moc_dclassificador.cpp moc_dbuscador.cpp moc_dautonomia.cpp moc_dconfiguracoes.cpp
+compiler_moc_header_make_all: moc_wlogin.cpp moc_dtelainicial.cpp moc_dclassificador.cpp moc_dbuscador.cpp moc_dautonomia.cpp moc_dconfiguracoes.cpp moc_dtemplate.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_wlogin.cpp moc_dtelainicial.cpp moc_dclassificador.cpp moc_dbuscador.cpp moc_dautonomia.cpp moc_dconfiguracoes.cpp
+	-$(DEL_FILE) moc_wlogin.cpp moc_dtelainicial.cpp moc_dclassificador.cpp moc_dbuscador.cpp moc_dautonomia.cpp moc_dconfiguracoes.cpp moc_dtemplate.cpp
 moc_wlogin.cpp: ../classcau/dtelainicial.h \
 		../classcau/dclassificador.h \
 		../classcau/segmentador.h \
@@ -498,11 +504,15 @@ moc_dconfiguracoes.cpp: ../classcau/dconfiguracoes.h \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau -I/usr/local/include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/6 -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6/backward -I/usr/lib/gcc/x86_64-linux-gnu/6/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../classcau/dconfiguracoes.h -o moc_dconfiguracoes.cpp
 
+moc_dtemplate.cpp: ../classcau/dtemplate.h \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/moc
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/ferraz/Documentos/dev_area/projects/uesc/uesc_tcc/classcau -I/usr/local/include -I/usr/local/include/opencv2 -I/usr/local/include/opencv -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/6 -I/usr/include/x86_64-linux-gnu/c++/6 -I/usr/include/c++/6/backward -I/usr/lib/gcc/x86_64-linux-gnu/6/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../classcau/dtemplate.h -o moc_dtemplate.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h
+compiler_uic_make_all: ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h ui_dtemplate.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h
+	-$(DEL_FILE) ui_wlogin.h ui_dtelainicial.h ui_dclassificador.h ui_dbuscador.h ui_dautonomia.h ui_dconfiguracoes.h ui_dtemplate.h
 ui_wlogin.h: ../classcau/wlogin.ui \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/uic
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../classcau/wlogin.ui -o ui_wlogin.h
@@ -512,8 +522,7 @@ ui_dtelainicial.h: ../classcau/dtelainicial.ui \
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../classcau/dtelainicial.ui -o ui_dtelainicial.h
 
 ui_dclassificador.h: ../classcau/dclassificador.ui \
-		/usr/lib/x86_64-linux-gnu/qt5/bin/uic \
-		../classcau/customview.h
+		/usr/lib/x86_64-linux-gnu/qt5/bin/uic
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../classcau/dclassificador.ui -o ui_dclassificador.h
 
 ui_dbuscador.h: ../classcau/dbuscador.ui \
@@ -527,6 +536,10 @@ ui_dautonomia.h: ../classcau/dautonomia.ui \
 ui_dconfiguracoes.h: ../classcau/dconfiguracoes.ui \
 		/usr/lib/x86_64-linux-gnu/qt5/bin/uic
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../classcau/dconfiguracoes.ui -o ui_dconfiguracoes.h
+
+ui_dtemplate.h: ../classcau/dtemplate.ui \
+		/usr/lib/x86_64-linux-gnu/qt5/bin/uic
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../classcau/dtemplate.ui -o ui_dtemplate.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -568,8 +581,7 @@ dtelainicial.o: ../classcau/dtelainicial.cpp ../classcau/dtelainicial.h \
 
 dclassificador.o: ../classcau/dclassificador.cpp ../classcau/dclassificador.h \
 		../classcau/segmentador.h \
-		ui_dclassificador.h \
-		../classcau/customview.h
+		ui_dclassificador.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dclassificador.o ../classcau/dclassificador.cpp
 
 dbuscador.o: ../classcau/dbuscador.cpp ../classcau/dbuscador.h \
@@ -584,11 +596,15 @@ dconfiguracoes.o: ../classcau/dconfiguracoes.cpp ../classcau/dconfiguracoes.h \
 		ui_dconfiguracoes.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dconfiguracoes.o ../classcau/dconfiguracoes.cpp
 
-customview.o: ../classcau/customview.cpp ../classcau/customview.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o customview.o ../classcau/customview.cpp
-
 segmentador.o: ../classcau/segmentador.cpp ../classcau/segmentador.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o segmentador.o ../classcau/segmentador.cpp
+
+dtemplate.o: ../classcau/dtemplate.cpp ../classcau/dtemplate.h \
+		ui_dtemplate.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dtemplate.o ../classcau/dtemplate.cpp
+
+gvcustomview.o: ../classcau/gvcustomview.cpp ../classcau/gvcustomview.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gvcustomview.o ../classcau/gvcustomview.cpp
 
 qrc_resource.o: qrc_resource.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_resource.o qrc_resource.cpp
@@ -610,6 +626,9 @@ moc_dautonomia.o: moc_dautonomia.cpp
 
 moc_dconfiguracoes.o: moc_dconfiguracoes.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_dconfiguracoes.o moc_dconfiguracoes.cpp
+
+moc_dtemplate.o: moc_dtemplate.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_dtemplate.o moc_dtemplate.cpp
 
 ####### Install
 

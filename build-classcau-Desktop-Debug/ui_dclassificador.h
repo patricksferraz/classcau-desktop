@@ -22,7 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QVBoxLayout>
-#include "customview.h"
+#include "gvcustomview.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -47,7 +47,7 @@ public:
     QPushButton *pbOutput;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pbLixeira;
-    CustomView *gvImage;
+    GVCustomView *gvImage;
     QHBoxLayout *horizontalLayout_5;
     QPushButton *pbExtrair;
     QSpacerItem *horizontalSpacer_4;
@@ -55,7 +55,7 @@ public:
     QPushButton *pbImprimir;
     QPushButton *pbEncaminhar;
     QVBoxLayout *verticalLayout_2;
-    CustomView *gvResult;
+    GVCustomView *gvResult;
     QHBoxLayout *horizontalLayout;
     QLabel *label;
     QSpacerItem *horizontalSpacer;
@@ -184,7 +184,7 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_4);
 
-        gvImage = new CustomView(fClassificador);
+        gvImage = new GVCustomView(fClassificador);
         gvImage->setObjectName(QStringLiteral("gvImage"));
         gvImage->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
@@ -253,7 +253,7 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        gvResult = new CustomView(fClassificador);
+        gvResult = new GVCustomView(fClassificador);
         gvResult->setObjectName(QStringLiteral("gvResult"));
         gvResult->setStyleSheet(QLatin1String("background-color: rgb(246, 244, 244);\n"
 "color: rgb(51, 23, 9);"));
